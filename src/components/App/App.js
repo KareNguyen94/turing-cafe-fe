@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ResercationContainer from '../ReservationContainer/ReservationContainer.js'
 
 class App extends Component {
   constructor() {
@@ -12,7 +13,9 @@ class App extends Component {
   componentDidMount() {
     fetch('http://localhost:3001/api/v1/reservations')
     .then(response => response.json())
-    .then(reservations => this.setState({...reservations}))
+    .then(reservations =>  {
+      this.setState({ reservations: reservations })
+    })
   }
 
   render() {
@@ -23,7 +26,7 @@ class App extends Component {
   
         </div>
         <div className='resy-container'>
-          
+          <ResercationContainer reservations={this.state.reservations}/>
         </div>
       </div>
     )

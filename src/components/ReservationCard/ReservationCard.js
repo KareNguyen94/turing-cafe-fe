@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ id, name, date, time, number }) => {
+const ReservationCard = ({ id, name, date, time, number }) => {
 
   return (
   <article key={id}>
