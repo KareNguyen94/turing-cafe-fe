@@ -5,13 +5,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      reservartions: {
-        id: null,
-        name: '',
-        date: '',
-        time: '',
-        number: null,
-      }
+      reservations: []
     }
   }
 
